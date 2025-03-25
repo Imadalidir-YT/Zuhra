@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Zuhra! ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@600&display=swap');
+
+        body {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            padding: 50px;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: auto;
+            animation: popUp 1.5s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            font-size: 42px;
+            font-family: 'Pacifico', cursive;
+            animation: bounce 1.5s infinite;
+        }
+        p {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            margin-top: 15px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 22px;
+            font-family: 'Pacifico', cursive;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff1e3c;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes glowing {
+            0% { text-shadow: 0 0 10px pink; }
+            50% { text-shadow: 0 0 20px red; }
+            100% { text-shadow: 0 0 10px pink; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="step1">
+        <h2>Hi Zuhra, The World's Cutest Girl! ❤️</h2>
+        <button onclick="nextStep(2)">Click to See Magic 💖</button>
+    </div>
+
+    <div class="container hidden" id="step2">
+        <h2>Your Beautiful Eyes 😍</h2>
+        <img src="https://i.ibb.co/D3b9j3D/b917687acf31ac25.jpg" alt="Zuhra's Eyes">
+        <button onclick="nextStep(3)">Click Here 💘</button>
+    </div>
+
+    <div class="container hidden" id="step3">
+        <p>"Zuhra, tumhari aankhein chand ki roshni se bhi zyada haseen hain. Jab tumhari taraf dekhta hoon, duniya ruk si jati hai! ❤️"</p>
+        <button onclick="nextStep(4)">Next Magic 🎀</button>
+    </div>
+
+    <div class="container hidden" id="step4">
+        <p>"Tumhari muskurahat dil ko bechain karti hai, jaise hawa gulab ki khushbu lekar aaye. Tumhari hasi kisi ka bhi din bana sakti hai! 🌺"</p>
+        <button onclick="nextStep(5)">More Love 💓</button>
+    </div>
+
+    <div class="container hidden" id="step5">
+        <p>"Zuhra, tum sirf ek ladki nahi, ek jadoo ho. Tumhari baatein, tumhari adayein, sab kuch ek kahani jaisa lagta hai jo sirf khubsurti aur pyaar se likhi gayi ho! 😍"</p>
+        <button onclick="nextStep(6)">Last Surprise 💞</button>
+    </div>
+
+    <div class="container hidden" id="step6">
+        <p style="animation: glowing 2s infinite;">
+            "Mohabbat karni hai to aankhon se karo,<br> 
+            Honthon ki baatein to jhooti bhi lagti hain! ❤️"
+        </p>
+        <p>"Tumhare bina duniya adhuri lagti hai. Tum sirf ek naam nahi, ek ehsaas ho jo dil ki har dhadkan mein mehsoos hota hai! ❤️"</p>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.getElementById("step" + (step - 1)).style.display = "none";
+            document.getElementById("step" + step).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
